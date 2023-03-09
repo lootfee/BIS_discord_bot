@@ -31,7 +31,7 @@ async def on_message(message):
     if len(message.content) > 2000:
       response = "Content must be 2000 or fewer in length"
 
-    response = f"""```{getJavaReply(message.content.replace('$java', ''))}```"""
+    response = f"""```{getJavaReply(message.content)}```"""
 
     await message.channel.send(response)
 
@@ -39,7 +39,7 @@ async def on_message(message):
     if len(message.content) > 2000:
       response = "Content must be 2000 or fewer in length"
 
-    response = f"{getTrumpReply(message.content.replace('$trump ', ''))}"
+    response = f"{getTrumpReply(message.content)}"
 
     await message.channel.send(response)
 
